@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Col, Row, Form, Button } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { toast } from 'react-toastify';
 import { useProfileMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
