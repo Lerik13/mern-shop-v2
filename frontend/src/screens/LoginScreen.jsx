@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Button, Col, Form, Row } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import FormContainer from '../components/FormContainer';
 import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
@@ -83,5 +83,4 @@ const LoginScreen = () => {
 		</FormContainer>
 	)
 }
-
 export default LoginScreen
