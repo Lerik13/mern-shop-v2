@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { Button, Col, Form, Row } from 'react-bootstrap';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Button, Form } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import FormContainer from '../../components/FormContainer';
 import Loader from '../../components/Loader';
@@ -85,7 +84,9 @@ const ProductEditScreen = () => {
 		</Link>
 		<FormContainer>
 			<h1>Edit Product</h1>
+			
 			{loadingUpdate && <Loader />}
+			
 			{isLoading ? <Loader /> : (
 				error ? (
 					<Message variant='danger'>{error}</Message>
