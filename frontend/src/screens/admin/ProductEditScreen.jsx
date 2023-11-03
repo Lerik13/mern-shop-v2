@@ -84,9 +84,7 @@ const ProductEditScreen = () => {
 		</Link>
 		<FormContainer>
 			<h1>Edit Product</h1>
-			
-			{loadingUpdate && <Loader />}
-			
+	
 			{isLoading ? <Loader /> : (
 				error ? (
 					<Message variant='danger'>{error}</Message>
@@ -101,6 +99,7 @@ const ProductEditScreen = () => {
 								onChange={(e) => setName(e.target.value)}
 							/>
 						</Form.Group>
+						
 						<Form.Group controlId='price' className='my-2'>
 							<Form.Label>Price</Form.Label>
 							<Form.Control
@@ -125,6 +124,7 @@ const ProductEditScreen = () => {
 								onChange={ uploadFileHandler }
 							/>
 						</Form.Group>
+						{loadingUpdate && <Loader />}
 
 						<Form.Group controlId='brand' className='my-2'>
 							<Form.Label>Brand</Form.Label>
@@ -135,6 +135,7 @@ const ProductEditScreen = () => {
 								onChange={(e) => setBrand(e.target.value)}
 							/>
 						</Form.Group>
+
 						<Form.Group controlId='countInStock' className='my-2'>
 							<Form.Label>Count In Stock</Form.Label>
 							<Form.Control
@@ -145,7 +146,6 @@ const ProductEditScreen = () => {
 							/>
 						</Form.Group>
 						
-						
 						<Form.Group controlId='category' className='my-2'>
 							<Form.Label>Category</Form.Label>
 							<Form.Control
@@ -155,6 +155,7 @@ const ProductEditScreen = () => {
 								onChange={(e) => setCategory(e.target.value)}
 							/>
 						</Form.Group>
+
 						<Form.Group controlId='description' className='my-2'>
 							<Form.Label>Description</Form.Label>
 							<Form.Control

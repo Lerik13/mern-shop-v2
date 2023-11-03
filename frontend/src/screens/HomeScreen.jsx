@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Col, Row } from 'react-bootstrap';
 import Product from '../components/Product';
 import { useGetProductsQuery, useGetTopProductsQuery } from '../slices/productsApiSlice';
+import Meta from '../components/Meta';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Paginate from '../components/Paginate';
@@ -28,6 +29,7 @@ const HomeScreen = () => {
 				</Link>
 			)}
 			<>
+				<Meta />
 				<h1>Latest Products</h1>
 				<Row>
 					{data.products.map(product => 
